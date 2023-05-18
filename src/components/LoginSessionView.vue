@@ -50,7 +50,7 @@
                     <div class="contraseña">
                         <router-link to="/recover/password">
                                 <span >
-                                <a class="recuperarcontra">¿Olvidastte tu contraseña?</a>
+                                <a class="recuperarcontra">¿Olvidaste tu contraseña?</a>
                                 </span>
                         </router-link>
                     </div>
@@ -82,7 +82,7 @@
 <script>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import data from '@/server/db.json';
+import { RegistersApiService } from '@/core/services/registers-api.service';
 
 export default {
     setup() {
@@ -92,19 +92,32 @@ export default {
         });
 
         const router = useRouter();
+        const apiService = new RegistersApiService();
 
-        const verificarCredenciales = () => {
-            // Buscar el usuario en la lista de registros
-            const usuario = data.registers.find((registro) => registro.correo === value.value.correo && registro.contrasena === value.value.contrasena);
+        const verificarCredenciales = async () => {
+            try {
+                // Obtener todos los registros desde la API
+                const registros = await apiService.getAll();
 
-            // Verificar si se encontró el usuario
-            if (usuario) {
-                // Redirigir a la página de destino usando router.push
-                alert('Inicio de sesion correctamente');
-                router.push('/add/publication');
-            } else {
-                // Mostrar mensaje de error si las credenciales son incorrectas
-                alert('Credenciales incorrectas');
+                // Buscar el usuario en la lista de registros
+                const usuario = registros.find(
+                    (registro) =>
+                        registro.correo === value.value.correo &&
+                        registro.contrasena === value.value.contrasena
+                );
+
+                // Verificar si se encontró el usuario
+                if (usuario) {
+                    // Redirigir a la página de destino usando router.push
+                    alert('Inicio de sesión correctamente');
+                    router.push('/add/publication');
+                } else {
+                    // Mostrar mensaje de error si las credenciales son incorrectas
+                    alert('Credenciales incorrectas');
+                }
+            } catch (error) {
+                console.error('Error al obtener los registros', error);
+                alert('Ocurrió un error al verificar las credenciales');
             }
         };
 
@@ -112,6 +125,7 @@ export default {
     },
 };
 </script>
+
 
 <style scoped>
 .linea-horizontal {

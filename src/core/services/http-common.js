@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 export default axios.create({
-    baseURL: 'http://localhost:3000/api/v1',
+    baseURL: 'https://servifix-169f2-default-rtdb.firebaseio.com',
     headers: { 'Content-type': 'application/json' }
 });
+

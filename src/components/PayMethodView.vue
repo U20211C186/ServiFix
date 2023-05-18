@@ -58,7 +58,7 @@
                     </div>
 
                     <div class="card flex justify-content-center button-vamos">
-                        <pv-button @click="agragarTarjeta" label="Add new card" />
+                        <pv-button @click="agregarTarjeta" label="Add new card" />
                     </div>
 
                 </form>
@@ -74,7 +74,6 @@
 <script>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import data from '@/server/db.json';
 
 export default {
     setup() {
@@ -84,12 +83,12 @@ export default {
 
         const router = useRouter();
 
-        const agragarTarjeta = () => {
+        const agregarTarjeta = () => {
             alert('Tarjeta agregada con exito!');
             router.push('/add/publication');
         };
 
-        return { value, agragarTarjeta };
+        return { value, agregarTarjeta };
     },
 };
 </script>
