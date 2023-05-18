@@ -12,10 +12,6 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/landing' // Redirigir la ruta raíz a /landing
-    },
-    {
-      path: '/landing',
       name: 'landing',
       component: LandingView
     },
