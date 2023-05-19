@@ -43,16 +43,34 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9 col-sm-7 ml-auto">
-                <div class="add flex-column">
-                    <router-link to="/add/publicationform">
-                        <button class="square-button">
-                            <span class="material-symbols-outlined">add</span>
-                        </button>
-                    </router-link>
-                    <h1>Solicitar servicio técnico</h1>
+
+            <div class="box-cards">
+                <div class="card-container">
+                    <pv-card v-for="(publication, index) in publications" :key="index" class="card">
+                        <template #title>
+                            {{ publication.nombre }}
+                        </template>
+                        <template #content>
+                            <p><strong>Departamento:</strong> {{ publication.departamento }}</p>
+                            <p><strong>Descripción:</strong> {{ publication.descripcion }}</p>
+                            <p><strong>Distrito:</strong> {{ publication.distrito }}</p>
+                            <p><strong>Fecha y Hora:</strong> {{ publication.fechayhora }}</p>
+                            <p><strong>Precio:</strong> {{ publication.precio }}</p>
+                        </template>
+                    </pv-card>
+                    <div class="card2">
+                        <div class="center">
+                        <router-link to="/add/publicationform">
+                            <button class="square-button">
+                                <span class="material-symbols-outlined">add</span>
+                            </button>
+                        </router-link>
+                        <h1>Solicitar servicio técnico</h1>
+                        </div>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </template>
@@ -60,10 +78,85 @@
 
 <script>
 
+import {PublicationApiService} from "@/core/services/publication-api.service";
+
+export default {
+    data() {
+        return {
+            publications: []
+        };
+    },
+    mounted() {
+        this.fetchPublications();
+    },
+    methods: {
+        fetchPublications() {
+            const publicationApiService = new PublicationApiService();
+            publicationApiService.getAll()
+                .then(response => {
+                    this.publications = response.data;
+                })
+                .catch(error => {
+                    console.error('Error retrieving publications:', error);
+                });
+        }
+    }
+};
+
 </script>
 
 
 <style scoped>
+
+.box-cards{
+    position: relative;
+    text-align: center;
+}
+
+.card-container {
+    margin-left: 250px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 16px;
+    background-color: #fff;
+
+}
+.card2  {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0);
+    border-radius: 4px;
+    padding: 16px;
+    background-color: #fff;
+
+}
+
+.card p {
+    margin-bottom: 8px;
+}
+
+.card strong {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+@media (max-width: 480px) {
+    .card {
+        flex: 0 0 100%;
+    }
+}
 
 ul {
     list-style: none;
@@ -128,13 +221,6 @@ a {
     left: 0;
 }
 
-.add {
-    height: 700px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    overflow-y: auto;
-}
 h1 {
     margin: 20px;
     font-family: 'Roboto';
@@ -145,7 +231,8 @@ h1 {
     text-align: center;
 }
 .square-button {
-    display: flex;
+
+
     align-items: center;
     justify-content: center;
     width: 200px;
@@ -167,6 +254,9 @@ h1 {
 
 .material-symbols-outlined {
     font-size: 200px;
+}
+.center {
+    text-align: center;
 }
 
 </style>
