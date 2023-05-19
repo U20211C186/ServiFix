@@ -17,7 +17,6 @@ import InputText from 'primevue/inputtext'
 import Toolbar from "primevue/toolbar";
 import Button from "primevue/button";
 import Password from 'primevue/password';
-import Card from "primevue/card";
 
 const app = createApp(App)
 
@@ -30,6 +29,4 @@ app.component("pv-input-text",InputText)
 app.component("pv-toolbar",Toolbar)
 app.component("pv-button",Button)
 app.component("pv-password",Password)
-app.component("pv-card",Card)
-
 app.mount('#app')
