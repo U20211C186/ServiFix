@@ -57,7 +57,7 @@
 <script>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { RegistersApiService } from '@/core/services/registers-api.service';
+import data from '@/server/db.json';
 
 export default {
     setup() {
@@ -66,32 +66,22 @@ export default {
         });
 
         const router = useRouter();
-        const apiService = new RegistersApiService();
 
-        const enviarEnlaceRecuperacion = async () => {
-            try {
-                // Obtener todos los registros desde la API
-                const registros = await apiService.getAll();
+        const enviarEnlaceRecuperacion = () => {
+            // Buscar el usuario en la lista de registros
+            const usuario = data.registers.find((registro) => registro.correo === value.value.correo);
 
-                // Buscar el usuario en la lista de registros
-                const usuario = registros.find(
-                    (registro) => registro.correo === value.value.correo
-                );
+            // Verificar si se encontró el usuario
+            if (usuario) {
+                // Redirigir a la página de destino usando router.push
+                alert('Enlace de recuperacion enviado');
+                value.value.correo="";
+                router.push('/recover/password');
+            } else {
+                // Mostrar mensaje de error si las credenciales son incorrectas
+                alert('Correo electronico invalido');
+                value.value.correo="";
 
-                // Verificar si se encontró el usuario
-                if (usuario) {
-                    // Redirigir a la página de destino usando router.push
-                    alert('Enlace de recuperación enviado');
-                    value.value.correo = '';
-                    router.push('/recover/password');
-                } else {
-                    // Mostrar mensaje de error si las credenciales son incorrectas
-                    alert('Correo electrónico inválido');
-                    value.value.correo = '';
-                }
-            } catch (error) {
-                console.error('Error al obtener los registros', error);
-                alert('Ocurrió un error al enviar el enlace de recuperación');
             }
         };
 
@@ -99,7 +89,6 @@ export default {
     },
 };
 </script>
-
 
 <style scoped>
 
