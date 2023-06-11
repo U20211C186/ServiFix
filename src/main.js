@@ -9,7 +9,7 @@ import 'primevue/resources/themes/md-light-indigo/theme.css'
 import 'primevue/resources/primevue.min.css'
 import 'primeflex/primeflex.css'
 import 'primeicons/primeicons.css'
-
+import '@fortawesome/fontawesome-free/css/all.css';
 
 import Splitter from 'primevue/splitter';
 import SplitterPanel from 'primevue/splitterpanel';
