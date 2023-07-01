@@ -19,11 +19,13 @@
                                 </li>
                                 <li>
                                     <img src="../assets/images/list-icon.png" alt="list-icon">
-                                    <a href="#">Bandeja de Entrada</a>
+                                    <router-link to="/inbox">
+                                        <a href="#">Bandeja de Entrada</a>
+                                    </router-link>
                                 </li>
                                 <li>
                                     <img src="../assets/images/email-icon.png" alt="email-icon">
-                                    <a href="#">Registro</a>
+                                    <a href="#">Notificaciones</a>
                                 </li>
                                 <li>
                                     <img src="../assets/images/user-icon.png" alt="user-icon">

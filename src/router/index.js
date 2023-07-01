@@ -14,6 +14,9 @@ import PostponeRequestView from "@/components/PostponeRequestView.vue";
 import ServiceStatusView from "@/components/ServiceStatusView.vue";
 import SaveSuccessfulView from "@/components/SaveSuccessfulView.vue";
 import InboxView from "@/components/InboxView.vue";
+import MyRouteView from "@/components/MyRouteView.vue";
+import NotificationsView from "@/components/NotificationsView.vue";
+import DetailsView from "@/components/DetailsView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -62,6 +65,21 @@ const router = createRouter({
       path: '/inbox',
       name: 'InboxView',
       component: InboxView
+    },
+    {
+      path: '/route',
+      name: 'MyRouteView',
+      component: MyRouteView
+    },
+    {
+      path: '/details',
+      name: 'DetailsView',
+      component: DetailsView
+    },
+    {
+      path: '/notifications',
+      name: 'NotificationsView',
+      component: NotificationsView
     },
     {
       path: '/pay',

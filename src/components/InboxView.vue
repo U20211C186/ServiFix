@@ -22,6 +22,14 @@
                                     </router-link>
                                 </li>
                                 <li>
+                                    <img src="../assets/images/rute-icon.png" alt="rute-icon">
+
+                                    <router-link to="/route">
+                                        <a>Mi Ruta</a>
+
+                                    </router-link>
+                                </li>
+                                <li>
                                     <img src="../assets/images/list-icon.png" alt="list-icon">
                                    <router-link to="/inbox">
                                        <a href="#">Bandeja de Entrada</a>
@@ -29,11 +37,13 @@
                                 </li>
                                 <li>
                                     <img src="../assets/images/email-icon.png" alt="email-icon">
-                                    <a href="#">Registro</a>
+                                    <router-link to="/notifications">
+                                        <a href="#">Notificaciones</a>
+                                    </router-link>
                                 </li>
                                 <li>
                                     <img src="../assets/images/user-icon.png" alt="user-icon">
-                                    <router-link to="/profile">
+                                    <router-link to="/view/profile">
                                     <a href="#">Perfil</a>
                                     </router-link>
                                 </li>

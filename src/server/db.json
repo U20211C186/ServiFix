@@ -95,6 +95,58 @@
       "contrasena": "asaff",
       "repetirContrasena": "asfafs",
       "id": 8
+    },
+    {
+      "correo": "",
+      "nombre": "",
+      "apellido": "",
+      "direccion": "",
+      "departamento": "",
+      "distrito": "",
+      "telefono": "",
+      "contrasena": "",
+      "repetirContrasena": "",
+      "apiId": "v1",
+      "id": 9
+    },
+    {
+      "correo": "",
+      "nombre": "",
+      "apellido": "",
+      "direccion": "",
+      "departamento": "",
+      "distrito": "",
+      "telefono": "",
+      "contrasena": "",
+      "repetirContrasena": "",
+      "apiId": "v1",
+      "id": 10
+    },
+    {
+      "correo": "",
+      "nombre": "",
+      "apellido": "",
+      "direccion": "",
+      "departamento": "",
+      "distrito": "",
+      "telefono": "",
+      "contrasena": "",
+      "repetirContrasena": "",
+      "apiId": "v1",
+      "id": 11
+    },
+    {
+      "correo": "pedro_2507@gmail.com",
+      "nombre": "Pedro",
+      "apellido": "Perez",
+      "direccion": "Av. Santa Maria",
+      "departamento": "Lima",
+      "distrito": "Lima",
+      "telefono": "994151189",
+      "contrasena": "acd134cd34",
+      "repetirContrasena": "acd134cd34",
+      "apiId": "v1",
+      "id": 12
     }
   ],
   "publication": [
@@ -124,6 +176,66 @@
       "distrito": "gsd",
       "fechayhora": "gsdgs",
       "id": 3
+    },
+    {
+      "nombre": "aasd",
+      "descripcion": "afs",
+      "precio": "af",
+      "departamento": "asf",
+      "distrito": "af",
+      "fechayhora": "fas",
+      "apiId": "v1",
+      "id": 4
+    },
+    {
+      "nombre": "qweqwr",
+      "descripcion": "qwrqr",
+      "precio": "qrqrqw",
+      "departamento": "rqrqrqr",
+      "distrito": "qwrqw",
+      "fechayhora": "qrq",
+      "apiId": "v1",
+      "id": 5
+    },
+    {
+      "nombre": "a",
+      "descripcion": "a",
+      "precio": "a",
+      "departamento": "a",
+      "distrito": "a",
+      "fechayhora": "a",
+      "apiId": "v1",
+      "id": 6
+    },
+    {
+      "nombre": "gsf",
+      "descripcion": "fd",
+      "precio": "sdf",
+      "departamento": "sdf",
+      "distrito": "sdf",
+      "fechayhora": "sdf",
+      "apiId": "v1",
+      "id": 7
+    },
+    {
+      "nombre": "",
+      "descripcion": "",
+      "precio": "",
+      "departamento": "",
+      "distrito": "",
+      "fechayhora": "",
+      "apiId": "v1",
+      "id": 8
+    },
+    {
+      "nombre": "22e12e",
+      "descripcion": "eqeqww",
+      "precio": "eqw",
+      "departamento": "qweqw",
+      "distrito": "qweq",
+      "fechayhora": "123",
+      "apiId": "v1",
+      "id": 9
     }
   ]
 }

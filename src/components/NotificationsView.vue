@@ -1,3 +1,4 @@
+
 <template>
     <div class="container">
         <div class="row">
@@ -44,13 +45,14 @@
                                 <li>
                                     <img src="../assets/images/user-icon.png" alt="user-icon">
                                     <router-link to="/view/profile">
-                                        <a >Perfil</a>
+                                        <a href="#">Perfil</a>
                                     </router-link>
                                 </li>
                                 <li>
                                     <img src="../assets/images/close-sesion-icon.png" alt="close-sesion-icon">
                                     <router-link to="/login">
                                         <a href="#">Cerrar Sesión</a>
+
                                     </router-link>
                                 </li>
                             </ul>
@@ -58,61 +60,54 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9 col-sm-7 ml-auto right-column">
-                <div class="form-header">
-                    <div class="upload-box">
-                        <i class="fas fa-times"></i>
-                        <p>Subir imagen</p>
+            <div class="col-lg-9 col-sm-7 ml-auto">
+                <div style="margin-top: 30px;">
+                    <div class="row2">
+                        <div class="profile-pic">
+                            <img src="../assets/images/user1.jpg" alt="Profile Picture">
+                        </div>
+                        <div class="details">
+                            <h3>Armando Casas</h3>
+                            <p>Es un técnico especializado en reparación de electrodomésticos, como lavadoras, refrigeradores y hornos, brindando servicios de mantenimiento y solución de problemas.</p>
+                        </div>
                     </div>
-                    <button class="edit-profile-button" @click="$router.push({name:'PayMethodView'})">Opciones de Pago</button>
+                    <div class="row2">
+                        <div class="profile-pic">
+                            <img src="../assets/images/user2.jpeg" alt="Profile Picture">
+                        </div>
+                        <div class="details">
+                            <h3>Pedro Perez</h3>
+                            <p>Es un técnico en climatización y aire acondicionado, capacitado en la instalación, mantenimiento y reparación de equipos de climatización y sistemas de aire acondicionado.</p>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="profile-pic">
+                            <img src="../assets/images/user3.jpeg" alt="Profile Picture">
+                        </div>
+                        <div class="details">
+                            <h3>Carlos Gómez</h3>
+                            <p>Es un técnico en carpintería y ebanistería, especializado en la reparación de muebles, restauración de superficies y trabajos de acabado en el hogar.</p>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="profile-pic">
+                            <img src="../assets/images/user4.jpg" alt="Profile Picture">
+                        </div>
+                        <div class="details">
+                            <h3>Laura López</h3>
+                            <p>Es una técnica en fontanería con experiencia en reparación de fugas de agua, instalación de tuberías y solución de problemas relacionados con sistemas de plomería en el hogar.</p>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="profile-pic">
+                            <img src="../assets/images/user5.jpeg" alt="Profile Picture">
+                        </div>
+                        <div class="details">
+                            <h3>Alejandro Rodríguez</h3>
+                            <p>Es un técnico en cerrajería con amplia experiencia en la reparación y sustitución de cerraduras, apertura de puertas y brindar servicios de seguridad para el hogar.</p>
+                        </div>
+                    </div>
                 </div>
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col">
-                            <div class="input-icon">
-                                <i class="fas fa-user"></i>
-                                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-                            </div>
-                        </div>
-                        <div class="form-group col">
-                            <div class="input-icon">
-                                <input type="text" class="form-control" id="apellido" placeholder="Apellido">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <input type="text" class="form-control short-input" id="direccion" placeholder="Dirección">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col">
-                            <div class="input-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <input type="text" class="form-control" id="departamento" placeholder="Departamento">
-                            </div>
-                        </div>
-                        <div class="form-group col">
-                            <div class="input-icon">
-                                <input type="text" class="form-control" id="distrito" placeholder="Distrito">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                            <input type="text" class="form-control" id="celular" placeholder="Celular">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-lock"></i>
-                            <input type="password" class="form-control" id="contrasena" placeholder="Contraseña">
-                        </div>
-                    </div>
-                    <button class="edit-profile-button">Guardar</button>
-                </form>
             </div>
         </div>
     </div>
@@ -174,13 +169,7 @@ a {
 .logo{
     text-align: center;
 }
-.add {
-    height: 700px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    overflow-y: auto;
-}
+
 h1 {
     margin: 20px;
     font-family: 'Roboto';
@@ -189,17 +178,6 @@ h1 {
     font-size: 25px;
     line-height: 29px;
     text-align: center;
-}
-
-.upload-box {
-    border: 2px dashed #ccc;
-    border-radius: 10px;
-    width: 300px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .upload-box i {
@@ -217,9 +195,6 @@ h1 {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .row {
@@ -228,85 +203,29 @@ h1 {
     width: 100%;
 }
 
-.col {
-    width: 100%;
-    padding: 10px;
-}
-
-@media only screen and (min-width: 768px) {
-    .col {
-        width: 50%;
-    }
-}
-
-.edit-profile-button {
-    background-color: #5689C0;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.edit-profile-button:hover {
-    background-color: #3A6B9E;
-}
-
-.input-icon {
-    position: relative;
-  }
-
-  .input-icon i {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    color: #5689C0;
-  }
-
-  .form-group {
-    flex-basis:50%;
-    margin-bottom: 20px;
-  }
-
-  .form-control {
-    width: 100%;
-    padding: 10px 10px 10px 30px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-
-  .fa {
-  color: #5689C0;
-}
-
-.form-row {
+.row2 {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.form-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
 }
 
-.upload-box {
-  display: flex;
-  align-items: center;
+.details h3 {
+    margin: 0;
+    font-size: 18px;
 }
 
-.upload-box i {
-  margin-right: 10px;
+.details p {
+    margin: 5px 0;
+    font-size: 14px;
 }
-.right-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
+
 </style>

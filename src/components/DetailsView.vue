@@ -1,3 +1,4 @@
+
 <template>
     <div class="container">
         <div class="row">
@@ -44,13 +45,14 @@
                                 <li>
                                     <img src="../assets/images/user-icon.png" alt="user-icon">
                                     <router-link to="/view/profile">
-                                        <a >Perfil</a>
+                                        <a href="#">Perfil</a>
                                     </router-link>
                                 </li>
                                 <li>
                                     <img src="../assets/images/close-sesion-icon.png" alt="close-sesion-icon">
                                     <router-link to="/login">
                                         <a href="#">Cerrar Sesión</a>
+
                                     </router-link>
                                 </li>
                             </ul>
@@ -58,65 +60,64 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-9 col-sm-7 ml-auto right-column">
-                <div class="form-header">
-                    <div class="upload-box">
-                        <i class="fas fa-times"></i>
-                        <p>Subir imagen</p>
+            <div class="col-lg-9 col-sm-7 ml-auto">
+                <div class="containerb">
+                    <div class="row2">
+                        <div class="profile-pic">
+                            <img src="../assets/images/user1.jpg" alt="Profile Picture">
+                        </div>
+                        <div class="details">
+                            <h3>Armando Casas</h3>
+                            <p>Es un técnico especializado en reparación de electrodomésticos, como lavadoras, refrigeradores y hornos, brindando servicios de mantenimiento y solución de problemas.</p>
+                        </div>
                     </div>
-                    <button class="edit-profile-button" @click="$router.push({name:'PayMethodView'})">Opciones de Pago</button>
                 </div>
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col">
-                            <div class="input-icon">
-                                <i class="fas fa-user"></i>
-                                <input type="text" class="form-control" id="nombre" placeholder="Nombre">
-                            </div>
-                        </div>
-                        <div class="form-group col">
-                            <div class="input-icon">
-                                <input type="text" class="form-control" id="apellido" placeholder="Apellido">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <input type="text" class="form-control short-input" id="direccion" placeholder="Dirección">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col">
-                            <div class="input-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <input type="text" class="form-control" id="departamento" placeholder="Departamento">
-                            </div>
-                        </div>
-                        <div class="form-group col">
-                            <div class="input-icon">
-                                <input type="text" class="form-control" id="distrito" placeholder="Distrito">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                            <input type="text" class="form-control" id="celular" placeholder="Celular">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="input-icon">
-                            <i class="fas fa-lock"></i>
-                            <input type="password" class="form-control" id="contrasena" placeholder="Contraseña">
-                        </div>
-                    </div>
-                    <button class="edit-profile-button">Guardar</button>
-                </form>
             </div>
         </div>
-    </div>
+        <div class="row3">
+            <div class="col-lg-6 col-sm-12">
+                <div class="rectangle-content text-center">
+                    <img src="../assets/images/batidora.jpg" alt="Imagen" class="medium-image">
+                    <h5>Item 1</h5>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="rectangle">
+                    <div class="rectangle-content">
+                        <p class="line-item">Artefacto:</p>
+                        <p class="line-item">Descripcion del Problema:</p>
+                        <p class="line-item">Marca:</p>
+                        <p class="line-item">Modelo:</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="divider">
 
+
+        <div class="row4">
+            <div class="col-lg-6 col-sm-12">
+                <div class="rectangle">
+                    <div class="rectangle-content" style="width: 130%; margin-top:-29px;">
+                        <p class="line-item2">Nombre:</p>
+                        <p class="line-item2">Direccion:</p>
+                        <p class="line-item2">Distrito:</p>
+                        <p class="line-item2">Numero de Telefono:</p>
+                        <p class="line-item2">Email:</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <div class="rectangle-content text-center">
+                    <img src="../assets/images/user1.jpg" alt="Imagen" style="width: 300px; height: auto;  margin-left: 200px;">
+                    <h6>Armando</h6>
+                </div>
+            </div>
+        </div>
+        <div class="call-section">
+            <button class="call-button call-button-wide"><i class="fas fa-phone"></i></button>
+        </div>
+    </div>
 </template>
 
 
@@ -174,13 +175,7 @@ a {
 .logo{
     text-align: center;
 }
-.add {
-    height: 700px;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    overflow-y: auto;
-}
+
 h1 {
     margin: 20px;
     font-family: 'Roboto';
@@ -189,17 +184,6 @@ h1 {
     font-size: 25px;
     line-height: 29px;
     text-align: center;
-}
-
-.upload-box {
-    border: 2px dashed #ccc;
-    border-radius: 10px;
-    width: 300px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .upload-box i {
@@ -217,9 +201,6 @@ h1 {
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 .row {
@@ -228,85 +209,139 @@ h1 {
     width: 100%;
 }
 
-.col {
-    width: 100%;
-    padding: 10px;
+.containerb {
+    background-color: #70aefc;
+    padding: 20px;
+    border: 2px solid black;
+    margin-top: 20px;
 }
 
-@media only screen and (min-width: 768px) {
-    .col {
-        width: 50%;
-    }
-}
-
-.edit-profile-button {
-    background-color: #5689C0;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-}
-
-.edit-profile-button:hover {
-    background-color: #3A6B9E;
-}
-
-.input-icon {
-    position: relative;
-  }
-
-  .input-icon i {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    color: #5689C0;
-  }
-
-  .form-group {
-    flex-basis:50%;
+.row2 {
+    display: flex;
+    align-items: center;
     margin-bottom: 20px;
-  }
-
-  .form-control {
-    width: 100%;
-    padding: 10px 10px 10px 30px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-
-  .fa {
-  color: #5689C0;
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
 }
 
-.form-row {
+.profile-pic img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.details h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.details p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.rectangle {
+    border: 2px;
+    margin-bottom: 20px;
+}
+
+
+.rectangle-header h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.rectangle-content {
+    padding: 10px;
+
+}
+
+.rectangle-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    background-color: lightblue;
+    padding: 5px;
+}
+
+.rectangle-content img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.rectangle-content h4 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.rectangle-content h5 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.row3 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin-left: 200px;
+    margin-top: 20px;
 }
 
-.form-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+.medium-image {
+    max-width: 50%;
+    height: auto;
 }
 
-.upload-box {
-  display: flex;
-  align-items: center;
+.line-item {
+    margin-bottom: 10px;
 }
 
-.upload-box i {
-  margin-right: 10px;
+.rectangle-content p {
+    margin: 35px;
 }
-.right-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+.divider {
+    border: 2px solid black;
+    margin-top: 10px;
+    width: 90%;
+    margin-left: 300px;
 }
+
+.row4 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 300px;
+    margin-top: 20px;
+}
+
+.rectangle-content h6 {
+    margin-left: 320px;
+    font-size: 16px;
+}
+
+.line-item2 {
+    margin-bottom: 10px;
+    padding: 100px;
+}
+
+.call-section {
+    text-align: center;
+    margin-top: -53px;
+    margin-left: 455px;
+}
+
+.call-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Cambiar a color verde */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+.call-button-wide {
+    width: 200px; /* Ajusta el ancho según tus necesidades */
+}
+
 </style>
